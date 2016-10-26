@@ -1,0 +1,133 @@
+\documentclass[german, % Standardmäßig deutsche Eigenarten, englisch -> english
+parskip=full, % Absätze durch Leerzeile trennen
+bibliography=totoc, % Literatur im Inhaltsverzeichnis
+draft, % TODO: Entwurfsmodus -> entfernen für endgültige Version
+]{scrartcl}
+\usepackage{ifluatex} % zum Testen, ob LuaTeX verwendet wird
+\ifluatex
+\usepackage{fontspec} % Laden von Schriften
+\setmainfont[Mapping=tex-text]{Linux Libertine O}  % Mapping ermöglicht die Verwendung z.B. von --
+\setsansfont[Mapping=tex-text]{Linux Biolinum O}
+\usepackage{polyglossia}  % Sprachpaket
+\setdefaultlanguage[spelling=new,babelshorthands=true]{german}  % Neue Rechtschreibung und Abkürzungen
+\else % kein LuaTeX
+\usepackage[utf8]{inputenc} % Kodierung der Datei
+\usepackage[T1]{fontenc} % Vollen Umfang der Schriftzeichen
+\usepackage[ngerman]{babel} % Sprache auf Deutsch (neue Rechtschreibung)
+%\usepackage{libertine} % Schriftart Linux Libertine/Biolinum verwenden
+\fi
+
+% Mathematik und Größen
+\usepackage{amsmath}
+\ifluatex
+\usepackage{unicode-math}
+\fi
+\usepackage[locale=DE, % deutsche Eigenarten, englisch -> US
+separate-uncertainty, % Unsicherheiten seperat
+]{siunitx}
+\usepackage{physics} % Erstellung von Gleichungen vereinfachen
+
+% Bilder einbinden
+\usepackage{graphicx}
+%\graphicspath{{bilder/}} % TODO: Pfad unter dem die Bilder gesucht werden
+
+% Gestaltung
+\usepackage{microtype}  % Mikrotypographie
+\usepackage{booktabs}  %schönere Tabellen
+\usepackage[toc]{multitoc}  %mehrspaltiges Inhaltsverzeichnis
+\usepackage{csquotes} % Anführungszeichen mit \enquote
+\usepackage{subfigure}  % Unterabbildungen a,b,c,…
+\usepackage{enumitem}  % Listen anpassen
+\setlist{itemsep=-10pt}
+\usepackage{scrpage2}  % Manipulation des Seitenstils
+% Kopf-/Fußzeilen
+\pagestyle{scrheadings}
+\clearscrheadings
+\automark{section}
+\ofoot{\pagemark}
+\ihead{\headmark}
+\setheadsepline{.5pt}
+
+\usepackage[colorlinks=true]{hyperref}  % Links und weitere PDF-Features
+
+\makeatletter 
+\renewcommand\subsection{\@startsection 
+   {subsection}{2}{0mm}%      % name, ebene, einzug 
+   {0.5\baselineskip}%            % vor-abstand 
+   {0.3\baselineskip}%            % nach-abstand 
+   {\bfseries\sffamily\large}%           % layout 
+   } 
+\makeatother 
+
+% TODO: Titel und Autor, … festlegen
+\newcommand*{\titel}{Optische Kohärenztomographie}
+\newcommand*{\autor}{Maximilian Obst, Thomas Adlmaier}
+\newcommand*{\abk}{OCT}
+\newcommand*{\betreuer}{M.Sc. Jonas Golde}
+\newcommand*{\messung}{28.10.2016}
+\newcommand*{\ort}{Medizinische Fakultät Carl Gustav Carus}
+
+\hypersetup{pdfauthor={\autor}, pdftitle={\titel}} % PDF-Metadaten
+
+\titlehead{F-Praktikum \abk \hfill TU Dresden}
+\subject{Versuchsprotokoll}
+\title{\titel}
+\author{\autor}
+\date{\begin{tabular}{ll}
+Protokoll: & \today\\
+Messung: & \messung\\
+Ort: & \ort\\
+Betreuer: & \betreuer\end{tabular}}
+
+%----------------
+\begin{document}
+\begin{titlepage}
+\maketitle
+
+\begin{figure}[hb] 
+  \centering
+     \includegraphics[width=0.7\textwidth]{kinesin_graphic.png}
+  \caption{Kinesin-1 with cargo on microtubules	\cite{kinesin_graphic}}
+  %\label{fig:https://de.pinterest.com/pin/565905509397043812/}
+\end{figure}
+\end{titlepage}
+
+\tableofcontents
+\pagebreak
+
+%------------------------
+\section{Physikalische Grundlagen}
+
+Die Optische Kohärenztomographie ist ein bildgebendes Verfahren, welches vor allem in der Humanmedizin verwendet wird und dort die Lücke zwischen Mikroskopie und Sonographie schließt, indem die ersten Millimeter des Gewebes räumlich abgebildet werden.
+In diesem Versuch wird eine Einführung in die Arbeit mit OCT geboten. Es wird sowohl Time Domain OCT als auch Frequency Domain OCT durchgeführt.
+
+\subsection{Einführung}
+
+Bei der Optischen Tomographie wird ein Material mit Licht einer bestimmten Wellenlänge im Infrarotbereich beschienen. Besonders eignen sich die Wellenlängen um 800\,nm, die eine besonders gute Auflösung der Bilder liefern, und die Wellenlängen um 1300\,nm, welche besonders tief in menschliches Gewebe eindringen können. Das vom Gewebe reflektierte Licht wird wie in einem Michelson-Interferometer mit dem von einem Referenzarm reflektierten Licht überlagert. Aus dem Interferenzbild kann ein räumliches Bild des Materials gewonnen werden. \( \SI{800}{\nano\meter\per\square\second} \)
+
+\subsection{Time Domain OCT}
+
+Bei der Time Domain OCT wird breitbandiges, kurzkohärentes Licht verwendet. Eine Interferenz entsteht nur, wenn beide Arme des Interferometers nahezu gleich lang sind, die Kohärenzlänge bestimmt direkt die axiale Auflösung. Durch Verschiebung des Referenzspiegels, sodass die Interferenz bestehen bleibt, kann die Tiefe der Reflexion bestimmt werden. Durch die nötige mechanische Arbeit können nur Wiederholungsraten von wenigen kHz erzeugt werden.
+
+\subsection{Frequency Domain OCT}
+
+Bei der Frequency Domain OCT wird nicht nur ein einfaches Interferenzsignal, sondern das gesamte Interferenzspektrum aufgenommen, indem das Licht spektral zerlegt wird. Damit kann die gesamte Tiefeninformation gleichzeitig aufgenommen werden und das Signal-Rausch-Verhältnis ist wesentlich besser. Es gibt zwei Varianten: Die Spectral Domain OCT, bei der das Licht durch ein Spektrometer gefiltert wird, und die Swept Source OCT, bei der die Wellenlänge des Lichts durchgestimmt wird. Die Wiederholungsrate wird bei SD OCT durch die Auslesegeschwindigkeit der Fotochips bestimmt, bei der SS OCT durch die Durchstimmgeschwindigkeit. Die Raten liegen bei etwa 200\,kHz.
+
+\subsection{Signalverarbeitung}
+
+\section{Durchführung}
+
+\section{Analyse}
+
+\section{Fazit}
+
+%------------------------
+
+\begin{thebibliography}{9}
+
+\bibitem{kinesin_graphic}
+  https://de.pinterest.com/pin/565905509397043812/
+
+\end{thebibliography}
+
+\end{document}

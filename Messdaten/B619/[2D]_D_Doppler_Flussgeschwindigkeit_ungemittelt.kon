@@ -1,0 +1,33 @@
+[OCT TASK]
+I/O_Device=1
+I/O_Frequency=12000,000000
+micrometer_air_per_Pixel_z=5,000000
+mm_per_V_x_mirror=1,000000
+mm_per_V_y_mirror=1,000000
+NSensor_Pixel=1024
+NAnalysis_Pixel=1024
+First_Pixel=0
+White_x=9,000000
+NWhite=32
+Nx=320
+offset_x=0,000000
+delta_x=0,005000
+Ny=320
+delta_y=0,005000
+offset_y=0,000000
+Meander=FALSE
+Rotate=-1
+dechirp_a=2,12720390E+2
+dechirp_b=5,95949140E-2
+dechirp_c=-1,49426200E-5
+current_x=0,000000
+current_y=0,000000
+N_Ascans=0
+
+[PATCH INFO]
+Bscans_per_patch=0
+Overlap=0
+
+[dB]
+dB_Min=-18
+dB_Max=60

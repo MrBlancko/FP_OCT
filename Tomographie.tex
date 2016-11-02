@@ -107,13 +107,40 @@ Bei der Optischen Tomographie wird ein Material mit Licht einer bestimmten Welle
 
 \subsection{Time Domain OCT}
 
-Bei der Time Domain OCT wird breitbandiges, kurzkohärentes Licht verwendet. Eine Interferenz entsteht nur, wenn beide Arme des Interferometers nahezu gleich lang sind, die Kohärenzlänge bestimmt direkt die axiale Auflösung. Durch Verschiebung des Referenzspiegels, sodass die Interferenz bestehen bleibt, kann die Tiefe der Reflexion bestimmt werden. Durch die nötige mechanische Arbeit können nur Wiederholungsraten von wenigen kHz erzeugt werden.
+Bei der Time Domain OCT wird breitbandiges, kurzkohärentes Licht verwendet. Eine Interferenz entsteht nur, wenn beide Arme des Interferometers nahezu gleich lang sind, die Kohärenzlänge bestimmt direkt die axiale Auflösung. Durch Verschiebung des Referenzspiegels, sodass die Interferenz bestehen bleibt, kann die Tiefe der Reflexion bestimmt werden. Durch die nötige mechanische Arbeit können nur Wiederholungsraten von wenigen kHz erzeugt werden. \\
+Die normierte komplexe Selbstkohärenzfunktion stellt den Interferenzterm da: 
+\begin{align}
+\gamma ( \tau ) = e^{-i \Omega \tau} e^{\frac{1}{16 \ln 2} ( \Delta \Omega \tau )^2} 
+\end{align}
+\begin{align*}
+\Omega = \text{Kreisfrequenz;} \ \tau = \text{Laufzeitdifferenz}
+\end{align*}
+Kohärenzlänge und axiale Auflösung: 
+\begin{align}
+l_c = \frac{2 \ln 2}{\pi} \frac{\lambda_c^2}{\Delta \lambda} 
+\end{align}
+\begin{align*}
+\lambda_c = \text{Zentralwellenlänge des Laserspektrums}
+\end{align*}
 
 \subsection{Frequency Domain OCT}
 
-Bei der Frequency Domain OCT wird nicht nur ein einfaches Interferenzsignal, sondern das gesamte Interferenzspektrum aufgenommen, indem das Licht spektral zerlegt wird. Damit kann die gesamte Tiefeninformation gleichzeitig aufgenommen werden und das Signal-Rausch-Verhältnis ist wesentlich besser. Es gibt zwei Varianten: Die Spectral Domain OCT, bei der das Licht durch ein Spektrometer gefiltert wird, und die Swept Source OCT, bei der die Wellenlänge des Lichts durchgestimmt wird. Die Wiederholungsrate wird bei SD OCT durch die Auslesegeschwindigkeit der Fotochips bestimmt, bei der SS OCT durch die Durchstimmgeschwindigkeit. Die Raten liegen bei etwa 200\,kHz.
+Bei der Frequency Domain OCT wird im Unterschied zur TD OCT nicht die Intensität des Interferenzsignals, sondern das ganze Interfernezspektrum aufgezeichnet, indem das Licht spektral zerlegt wird. Damit kann die gesamte Tiefeninformation gleichzeitig aufgenommen werden und das Signal-Rausch-Verhältnis ist wesentlich besser. Es gibt zwei Varianten: Die Spectral Domain OCT, bei der das Licht durch ein Spektrometer gefiltert wird, und die Swept Source OCT, bei der die Wellenlänge des Lichts durchgestimmt wird. Die Wiederholungsrate wird bei SD OCT durch die Auslesegeschwindigkeit der Fotochips bestimmt, bei der SS OCT durch die Durchstimmgeschwindigkeit. Die Raten liegen bei etwa 200\,kHz. \\
+Axiale Auflösung:
+\begin{align}
+FWHM_z = \frac{\sqrt{2 \ln 2}}{n}\frac{\lambda_c^2}{2 \pi \sigma_\lambda} = \frac{2 \ln 2}{\pi n}\frac{\lambda_c^2}{FWHM_\lambda} 
+\end{align}
+\begin{align*}
+\sigma_\lambda = \text{Standardabweichung bezüglich der Wellenlänge;} \ n = \text{Brechungsindex der Probe;} \\ FWHM_\lambda = \text{Halbwertsbreite des Laserspektrums}
+\end{align*}
+Maximale Eindringtiefe:
+\begin{align}
+z_{max} = \frac{\pi}{2 \delta k} = \frac{\lambda_c^2}{4 \delta \lambda}
+\end{align}
 
 \subsection{Signalverarbeitung}
+
+Um die Signale aus dem OCT zu verarbeiten, müssen verschiedene Umformungen vorgenommen werden: Zunächst muss ein Dechirp vorgenommen werden. Dann muss das Spektrum normiert werden. Schließlich wird mit Fast Fourier Transformation das Tiefenprofil erstellt. Die Intensitätsdarstellung wird dabei in die logarithmische Skala überführt und als 8\,bit Grauwert ausgegeben.
 
 \section{Durchführung}
 

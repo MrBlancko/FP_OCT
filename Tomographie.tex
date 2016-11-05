@@ -1,7 +1,7 @@
 \documentclass[german, % Standardmäßig deutsche Eigenarten, englisch -> english
 parskip=full, % Absätze durch Leerzeile trennen
 bibliography=totoc, % Literatur im Inhaltsverzeichnis
-draft, % TODO: Entwurfsmodus -> entfernen für endgültige Version
+%draft, % TODO: Entwurfsmodus -> entfernen für endgültige Version
 ]{scrartcl}
 \usepackage{ifluatex} % zum Testen, ob LuaTeX verwendet wird
 \ifluatex
@@ -39,7 +39,7 @@ separate-uncertainty, % Unsicherheiten seperat
 \usepackage{booktabs}  %schönere Tabellen
 \usepackage[toc]{multitoc}  %mehrspaltiges Inhaltsverzeichnis
 \usepackage{csquotes} % Anführungszeichen mit \enquote
-\usepackage{subfigure}  % Unterabbildungen a,b,c,…
+\usepackage{subcaption}  % Unterabbildungen a,b,c,…
 \usepackage{enumitem}  % Listen anpassen
 \setlist{itemsep=-10pt}
 \usepackage{scrpage2}  % Manipulation des Seitenstils
@@ -89,9 +89,9 @@ Betreuer: & \betreuer\end{tabular}}
 
 \begin{figure}[hb] 
   \centering
-     \includegraphics[width=0.7\textwidth]{kinesin_graphic.png}
-  \caption{Kinesin-1 with cargo on microtubules	\cite{kinesin_graphic}}
-  %\label{fig:https://de.pinterest.com/pin/565905509397043812/}
+     \includegraphics[width=0.7\textwidth]{tomographie}
+  \caption{Fingerkuppe unter optische Kohärenztomographie	\cite{bild-tomographie}}
+  \label{fig:tomographie}
 \end{figure}
 \end{titlepage}
 
@@ -185,6 +185,63 @@ Zur Bestimmung der Fließgeschwindigkeit muss zunächst der korrekte Dopllerwink
 
 \section{Analyse}
 
+\subsection{Time Domain OCT}
+
+\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[b]{0.4\textwidth}
+	   \includegraphics[width=\textwidth]{TD_OCT_DATA_Einhullende}
+		 \caption{Mit TD OCT gemessene Ausschlagsfunktion des Lautsprechers}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.4\textwidth}
+	   \includegraphics[width=\textwidth]{TD_OCT_FINAL}
+		 \caption{Berechnete Einhüllende der Funktion}
+	\end{subfigure}
+  \caption{Einhüllende des Ausschlags}
+	\label{fig:hull}
+\end{figure}
+
+Die Frequenzfunktion wird mit der simulierten TD OCT aufgenommen. Aus der Einhüllenden, die in Bild \ref{fig:hull} zu sehen ist, wird die Schwingungsdauer ermittelt:
+\begin{align*}
+T_{Schwingung} = (0.0253 \pm 0.0007) s
+\end{align*}
+
+\begin{figure}[hb] 
+  \centering
+     \includegraphics[width=0.7\textwidth]{Amplitude_Beispiel}
+  \caption{Auswertung der aufgenommenen Schwingungsamplitude des Lautsprechers}
+  \label{fig:amplitude}
+\end{figure}
+
+Die Schwingungsamplitude wird mit FD OCT aufgenommen. Das enstandene Bild kann in Bild \ref{fig:amplitude} gesehen werden.
+\begin{align*}
+l_{Amplitude} = (49 \pm 4) \mu m
+\end{align*}
+
+Die experimentelle Auflösung wird aus der Geschwindigkeit des Lautsprechers bestimmt:
+\begin{align}
+l_{c; exp.} = ???
+\end{align}
+Diese wird aus der gemessenen Schwingungsdauer und Amplitude ermittelt, der Fehler wird über die Gauss'sche Fehlerfortpflanzung bestimmt:
+\begin{align}
+v_{Lautsprecher} = \frac{2l_{Amplitude}}{T_{Schwingung}} \\
+\Delta v_{Lautsprecher} = \sqrt{\left( \frac{2 \Delta l_{Amplitude}}{T_{Schwingung}} \right)^2 + \left(-\frac{2l_{Amplitude} \Delta T_{Schwingung}}{T_{Schwingung}^2} \right)^2}
+\end{align}
+
+Die theoretische Auflösung der TD OCT wird mit der Formel 2 berechnet. 
+\begin{align*}
+l_{c; th.} = 9.0022 \mu m
+\end{align*}
+
+\subsection{Frequency Domain OCT}
+
+\begin{figure}[ht] 
+  \centering
+     \includegraphics[width=0.7\textwidth]{Glasplatte_Auswertung}
+  \caption{Auswertung des aufgenommenen Bildes der Glasplatte}
+  \label{fig:glasplatte}
+\end{figure}
+
 
 
 \section{Fazit}
@@ -193,8 +250,8 @@ Zur Bestimmung der Fließgeschwindigkeit muss zunächst der korrekte Dopllerwink
 
 \begin{thebibliography}{9}
 
-\bibitem{kinesin_graphic}
-  https://de.pinterest.com/pin/565905509397043812/
+\bibitem{bild-tomographie}
+  http://www.zwp-online.info/sites/default/files/users/kerstin/kohaerenz3.png
 
 \end{thebibliography}
 

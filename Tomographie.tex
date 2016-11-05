@@ -220,7 +220,7 @@ l_{Amplitude} = (49 \pm 4) \mu m
 
 Die experimentelle Auflösung wird aus der Geschwindigkeit des Lautsprechers bestimmt:
 \begin{align}
-l_{c; exp.} = ???
+l_{c, TD OCT; exp.} = ???
 \end{align}
 Diese wird aus der gemessenen Schwingungsdauer und Amplitude ermittelt, der Fehler wird über die Gauss'sche Fehlerfortpflanzung bestimmt:
 \begin{align}
@@ -230,7 +230,7 @@ v_{Lautsprecher} = \frac{2l_{Amplitude}}{T_{Schwingung}} \\
 
 Die theoretische Auflösung der TD OCT wird mit der Formel 2 berechnet. 
 \begin{align*}
-l_{c; th.} = 9.0022 \mu m
+l_{c, TD OCT; th.} = 9.0022 \mu m
 \end{align*}
 
 \subsection{Frequency Domain OCT}
@@ -242,7 +242,51 @@ l_{c; th.} = 9.0022 \mu m
   \label{fig:glasplatte}
 \end{figure}
 
+Die Glasplatte stellt eine nahezu scharfe Linie da. Durch die Auflösung der FD OCT wird diese Linie allerdings unscharf. Über diese Unschärfe lässt sich also die Auflösung des Gerätes ablesen. Eine Illustration dazu kann in Bild \ref{fig:glasplatte} gesehen werden.
+\begin{align*}
+l_{c, FD OCT; exp.} = 
+\end{align*}
 
+Die theoretische Auflösung der FD OCT lässt sich mithilfe der Formel 3 bestimmen:
+\begin{align*}
+l_{c, FD OCT; th.} = 
+\end{align*}
+
+\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+	   \includegraphics[width=\textwidth]{finger_uncreme_1}
+		 \caption{Ohne Einwirkung von Wasser}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+	   \includegraphics[width=\textwidth]{finger_uncreme_2}
+		 \caption{Nach 10 Minuten im Wasserbad}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+	   \includegraphics[width=\textwidth]{finger_uncreme_3}
+		 \caption{Nach 20 Minuten im Wasserbad}
+	\end{subfigure}
+  \caption{Uneingecremte Fingerspitze}
+	\label{fig:uncreme}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+	   \includegraphics[width=\textwidth]{finger_creme_1}
+		 \caption{Ohne Einwirkung von Wasser}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+	   \includegraphics[width=\textwidth]{finger_creme_2}
+		 \caption{Nach 10 Minuten im Wasserbad}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+	   \includegraphics[width=\textwidth]{finger_creme_3}
+		 \caption{Nach 20 Minuten im Wasserbad}
+	\end{subfigure}
+  \caption{Eingecremte Fingerspitze}
+	\label{fig:creme}
+\end{figure}
 
 \section{Fazit}
 
@@ -252,6 +296,8 @@ l_{c; th.} = 9.0022 \mu m
 
 \bibitem{bild-tomographie}
   http://www.zwp-online.info/sites/default/files/users/kerstin/kohaerenz3.png
+	05.11.2016
+	14:30 Uhr
 
 \end{thebibliography}
 

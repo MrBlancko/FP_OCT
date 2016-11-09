@@ -201,7 +201,7 @@ Zur Bestimmung der Fließgeschwindigkeit muss zunächst der korrekte Dopllerwink
 	\label{fig:hull}
 \end{figure}
 
-Die Frequenzfunktion wird mit der simulierten TD OCT aufgenommen. Aus der Einhüllenden, die in Bild \ref{fig:hull} zu sehen ist, wird die Schwingungsdauer ermittelt:
+Die Frequenzfunktion wird mit der simulierten TD OCT aufgenommen. Aus der Einhüllenden, die in Bild \ref{fig:hull} zu sehen ist, wird die Schwingungsdauer ermittelt. Als Fehler dient die über 4 Werte ermittelte Standardabweichung.
 \begin{align*}
 T_{Schwingung} = (0.0253 \pm 0.0007) s
 \end{align*}
@@ -213,20 +213,25 @@ T_{Schwingung} = (0.0253 \pm 0.0007) s
   \label{fig:amplitude}
 \end{figure}
 
-Die Schwingungsamplitude wird mit FD OCT aufgenommen. Das enstandene Bild kann in Bild \ref{fig:amplitude} gesehen werden.
+Die Schwingungsamplitude wird mit FD OCT aufgenommen. Das entstandene Bild kann in Bild \ref{fig:amplitude} gesehen werden. Auch hier wird als Fehler die Standardabweichung über 4 Werte gewählt.
 \begin{align*}
 l_{Amplitude} = (49 \pm 4) \mu m
 \end{align*}
 
-Die experimentelle Auflösung wird aus der Geschwindigkeit des Lautsprechers bestimmt:
+Die experimentelle Auflösung wird aus der Geschwindigkeit des Lautsprechers im Nulldurchgang bestimmt:
 \begin{align}
 l_{c, TD OCT; exp.} = ???
 \end{align}
-Diese wird aus der gemessenen Schwingungsdauer und Amplitude ermittelt, der Fehler wird über die Gauss'sche Fehlerfortpflanzung bestimmt:
-\begin{align}
-v_{Lautsprecher} = \frac{2l_{Amplitude}}{T_{Schwingung}} \\
-\Delta v_{Lautsprecher} = \sqrt{\left( \frac{2 \Delta l_{Amplitude}}{T_{Schwingung}} \right)^2 + \left(-\frac{2l_{Amplitude} \Delta T_{Schwingung}}{T_{Schwingung}^2} \right)^2}
-\end{align}
+Diese wird ermittelt, indem das Bild \ref{fig:amplitude} genauer ausgewertet wird: Ein Pixel in x-Richtung besteht aus einem Scan, wobei 12000 Scans pro Sekunde aufgezeichnet werden. Ein Pixel in y-Richtung entspricht $5\, \mu m$. Aus den Steigungen der Kurven ergibt sich nun folgende Geschwindigkeit im Nulldurchgang:
+\begin{align*}
+v_{Lautsprecher} = (43 \pm 3) mm/s
+\end{align*}
+Der Fehler wird über das Anlegen von Ausgleichsgeraden ermittelt.
+ 
+Damit ergeben sich die folgenden Werte:
+\begin{align*}
+v_{Lautsprecher} = (43 \pm 3) mm / s
+\end{align*}
 
 Die theoretische Auflösung der TD OCT wird mit der Formel 2 berechnet. 
 \begin{align*}
@@ -235,22 +240,36 @@ l_{c, TD OCT; th.} = 9.0022 \mu m
 
 \subsection{Frequency Domain OCT}
 
-\begin{figure}[ht] 
-  \centering
-     \includegraphics[width=0.7\textwidth]{Glasplatte_Auswertung}
-  \caption{Auswertung des aufgenommenen Bildes der Glasplatte}
-  \label{fig:glasplatte}
+\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[b]{0.4\textwidth}
+	   \includegraphics[width=\textwidth]{Glasplattenreflex}
+		 \caption{Gesamtes Rückstreuspektrum}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.4\textwidth}
+	   \includegraphics[width=\textwidth]{Ergebnis}
+		 \caption{Details des Rückstreupeaks}
+	\end{subfigure}
+  \caption{Rückstreupeak der Glasplatte}
+	\label{fig:peak}
 \end{figure}
 
-Die Glasplatte stellt eine nahezu scharfe Linie da. Durch die Auflösung der FD OCT wird diese Linie allerdings unscharf. Über diese Unschärfe lässt sich also die Auflösung des Gerätes ablesen. Eine Illustration dazu kann in Bild \ref{fig:glasplatte} gesehen werden.
+Eine raue Glasplatte reflektiert das eingestrahlte Licht zweifach. Die Halbwertsbreite des Rückstreupeaks korrespondiert mit der axialen Auflösung. Der Peak kann in Bild \ref{fig:peak} gesehen werden.
 \begin{align*}
-l_{c, FD OCT; exp.} = 
+l_{c, FD OCT; exp.} = (27.4 \pm 0.3) \mu m
 \end{align*}
 
-Die theoretische Auflösung der FD OCT lässt sich mithilfe der Formel 3 bestimmen:
+Die theoretische Auflösung der FD OCT lässt sich mithilfe der Formel 3 bestimmen. Dabei stellt die spektrale Bandbreite des Lasers FWHM\textsubscript{y} da:
 \begin{align*}
-l_{c, FD OCT; th.} = 
+l_{c, FD OCT; th.} = 6.0 \mu m
 \end{align*}
+
+Damit ergibt sich für das Verhältnis der beiden Auflösungen folgendes:
+\begin{align*}
+\frac{l_{c, FD OCT; exp.}}{l_{c, FD OCT; th.}} = 4.6
+\end{align*}
+
+Die experimentelle Auflösung ist damit um ein vielfaches schlechter als die theoretisch mögliche.
 
 \begin{figure}[ht]
 	\centering

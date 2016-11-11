@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.14)  11 NOV 2016 14:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.14)  11 NOV 2016 14:45
 entering extended mode
 **./Tomographie.tex
 (Tomographie.tex
@@ -2216,6 +2216,378 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 89.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 89.
+ <tomographie.png, id=67, 981.6675pt x 296.10625pt>
+File: tomographie.png Graphic file (type png)
+ <use tomographie.png>
+Package pdftex.def Info: tomographie.png used on input line 92.
+(pdftex.def)             Requested size: 292.7776pt x 88.31296pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 96.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 96.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 96.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 96.
+ [1
 
-!pdfTeX error: pdflatex.exe (file ./tomographie.pdf): reading image file failed
- ==> Fatal error occurred, no output PDF file produced!
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./tomographie.png>]
+Package tocbasic Info: character protrusion at toc deactivated on input line 98.
+ (Tomographie.toc)
+\tf@toc=\write4
+\openout4 = `Tomographie.toc'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 100.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 100.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 100.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 100.
+ [2]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 102.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 102.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 107.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 107.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 111.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 111.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 129.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 129.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 133.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 133.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 133.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 133.
+ [3]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 144.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 144.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 157.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 157.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 160.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 160.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 160.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 160.
+ [4]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 161.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 161.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 165.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 165.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 171.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 171.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 176.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 176.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 176.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 176.
+ [5]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 177.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 177.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 183.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 183.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 187.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 187.
+
+<TD_OCT_DATA_Einhullende.png, id=128, 774.7344pt x 592.8549pt>
+File: TD_OCT_DATA_Einhullende.png Graphic file (type png)
+ <use TD_OCT_DATA_Einhullende.png>
+Package pdftex.def Info: TD_OCT_DATA_Einhullende.png used on input line 191.
+(pdftex.def)             Requested size: 418.25555pt x 320.06451pt.
+
+<TD_OCT_FINAL.png, id=129, 774.7344pt x 592.8549pt>
+File: TD_OCT_FINAL.png Graphic file (type png)
+ <use TD_OCT_FINAL.png>
+Package pdftex.def Info: TD_OCT_FINAL.png used on input line 197.
+(pdftex.def)             Requested size: 418.25555pt x 320.06451pt.
+
+<Amplitude_Beispiel.png, id=132, 966.61125pt x 529.98pt>
+File: Amplitude_Beispiel.png Graphic file (type png)
+ <use Amplitude_Beispiel.png>
+Package pdftex.def Info: Amplitude_Beispiel.png used on input line 210.
+(pdftex.def)             Requested size: 292.7776pt x 160.52362pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 218.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 218.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 218.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 218.
+ [6]
+Overfull \hbox (178.49422pt too wide) in paragraph at lines 229--229
+[] 
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 239.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 239.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 239.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 239.
+[7 <./TD_OCT_DATA_Einhullende.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 251.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 251.
+ <Glasplattenreflex.png, id=151, 774.7344pt x 592.8549pt>
+File: Glasplattenreflex.png Graphic file (type png)
+
+<use Glasplattenreflex.png>
+Package pdftex.def Info: Glasplattenreflex.png used on input line 255.
+(pdftex.def)             Requested size: 418.25555pt x 320.06451pt.
+ <Ergebnis.png, id=152, 774.7344pt x 592.8549pt>
+File: Ergebnis.png Graphic file (type png)
+ <use Ergebnis.png>
+Package pdftex.def Info: Ergebnis.png used on input line 261.
+(pdftex.def)             Requested size: 418.25555pt x 320.06451pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 267.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 267.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 267.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 267.
+ [8 <./TD_OCT_FINAL.png>]
+<finger_uncreme_1.png, id=163, 642.4pt x 513.92pt>
+File: finger_uncreme_1.png Graphic file (type png)
+ <use finger_uncreme_1.png>
+Package pdftex.def Info: finger_uncreme_1.png used on input line 288.
+(pdftex.def)             Requested size: 125.47794pt x 100.37474pt.
+
+Underfull \hbox (badness 5954) in paragraph at lines 289--289
+[][][]|\T1/lmr/m/n/10 (+20) Oh-ne Ein-wir-kung von
+ []
+
+<finger_uncreme_2.png, id=164, 642.4pt x 513.92pt>
+File: finger_uncreme_2.png Graphic file (type png)
+ <use finger_uncreme_2.png>
+Package pdftex.def Info: finger_uncreme_2.png used on input line 292.
+(pdftex.def)             Requested size: 125.47794pt x 100.37474pt.
+
+<finger_uncreme_3.png, id=165, 642.4pt x 513.92pt>
+File: finger_uncreme_3.png Graphic file (type png)
+ <use finger_uncreme_3.png>
+Package pdftex.def Info: finger_uncreme_3.png used on input line 296.
+(pdftex.def)             Requested size: 125.47794pt x 100.37474pt.
+
+<finger_creme_1.png, id=166, 642.4pt x 513.92pt>
+File: finger_creme_1.png Graphic file (type png)
+ <use finger_creme_1.png>
+Package pdftex.def Info: finger_creme_1.png used on input line 306.
+(pdftex.def)             Requested size: 125.47794pt x 100.37474pt.
+
+Underfull \hbox (badness 5954) in paragraph at lines 307--307
+[][][]|\T1/lmr/m/n/10 (+20) Oh-ne Ein-wir-kung von
+ []
+
+<finger_creme_2.png, id=167, 642.4pt x 513.92pt>
+File: finger_creme_2.png Graphic file (type png)
+ <use finger_creme_2.png>
+Package pdftex.def Info: finger_creme_2.png used on input line 310.
+(pdftex.def)             Requested size: 125.47794pt x 100.37474pt.
+
+<finger_creme_3.png, id=168, 642.4pt x 513.92pt>
+File: finger_creme_3.png Graphic file (type png)
+ <use finger_creme_3.png>
+Package pdftex.def Info: finger_creme_3.png used on input line 314.
+(pdftex.def)             Requested size: 125.47794pt x 100.37474pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 331.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 331.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 331.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 331.
+ [9]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 332.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 332.
+
+<KapillarLuft.png, id=179, 513.92pt x 321.2pt>
+File: KapillarLuft.png Graphic file (type png)
+ <use KapillarLuft.png>
+Package pdftex.def Info: KapillarLuft.png used on input line 336.
+(pdftex.def)             Requested size: 418.25555pt x 261.41545pt.
+
+<KapillarEmulsion.png, id=180, 513.92pt x 321.2pt>
+File: KapillarEmulsion.png Graphic file (type png)
+ <use KapillarEmulsion.png>
+Package pdftex.def Info: KapillarEmulsion.png used on input line 342.
+(pdftex.def)             Requested size: 418.25555pt x 261.41545pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 376.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 376.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 376.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 376.
+ [10]
+<DopplerFluss.png, id=194, 321.2pt x 351.3125pt>
+File: DopplerFluss.png Graphic file (type png)
+ <use DopplerFluss.png>
+Package pdftex.def Info: DopplerFluss.png used on input line 382.
+(pdftex.def)             Requested size: 418.25555pt x 457.48347pt.
+
+<FlussDiagramm.png, id=195, 774.7344pt x 592.8549pt>
+File: FlussDiagramm.png Graphic file (type png)
+ <use FlussDiagramm.png>
+Package pdftex.def Info: FlussDiagramm.png used on input line 388.
+(pdftex.def)             Requested size: 418.25555pt x 320.06451pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 395.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 395.
+
+Overfull \hbox (299.75665pt too wide) in paragraph at lines 404--404
+[] 
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 410.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 410.
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--416
+[]\T1/lmr/m/n/10.95 (+20) http://www.zwp-online.info/sites/default/files/users/kerstin/kohaerenz3.png
+ []
+
+
+Overfull \hbox (6.05354pt too wide) in paragraph at lines 418--421
+[]\T1/lmr/m/n/10.95 (-20) https://tu-dresden.de/med/mf/ksm/ressourcen/dateien/OCT_Anleitung.pdf?lang=de
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 429.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+[11]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+ [12 <./Amplitude_Beispiel.png> <./Glasplattenreflex.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+ [13 <./Ergebnis.png> <./finger_uncreme_1.png (PNG copy)> <./finger_uncreme_2.png (PNG copy)> <./finger_uncreme_3.png (P
+NG copy)>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+ [14 <./finger_creme_1.png (PNG copy)> <./finger_creme_2.png (PNG copy)> <./finger_creme_3.png (PNG copy)> <./KapillarLu
+ft.png (PNG copy)>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+ [15 <./KapillarEmulsion.png (PNG copy)>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+ [16 <./DopplerFluss.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 429.
+ [17 <./FlussDiagramm.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 429.
+ (Tomographie.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 429.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 429.
+Package rerunfilecheck Info: File `Tomographie.out' has not changed.
+(rerunfilecheck)             Checksum: 744F5906C9C03F00B2B99AABA3E50A3E;977.
+ ) 
+Here is how much of TeX's memory you used:
+ 23423 strings out of 493334
+ 432275 string characters out of 3147000
+ 614923 words of memory out of 3000000
+ 26514 multiletter control sequences out of 15000+200000
+ 86633 words of font info for 107 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,11n,52p,10426b,814s stack positions out of 5000i,500n,10000p,200000b,50000s
+{P:/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-m
+athsy.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<P:/MiKTeX/fonts/type1/pub
+lic/lm/lmbx12.pfb><P:/MiKTeX/fonts/type1/public/lm/lmex10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><P:/MiKTeX/fon
+ts/type1/public/lm/lmmi8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr12.pfb><P:/M
+iKTeX/fonts/type1/public/lm/lmr6.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmro10.p
+fb><P:/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><P:/MiKTeX/fonts/type1/publ
+ic/lm/lmsy8.pfb>
+Output written on Tomographie.pdf (17 pages, 3725354 bytes).
+PDF statistics:
+ 295 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 28369 words of extra memory for PDF output out of 29859 (max. 10000000)
+

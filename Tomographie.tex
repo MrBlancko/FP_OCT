@@ -37,6 +37,7 @@ separate-uncertainty, % Unsicherheiten seperat
 % Gestaltung
 \usepackage{microtype}  % Mikrotypographie
 \usepackage{booktabs}  %schönere Tabellen
+\usepackage{multirow}
 \usepackage[toc]{multitoc}  %mehrspaltiges Inhaltsverzeichnis
 \usepackage{csquotes} % Anführungszeichen mit \enquote
 \usepackage{subcaption}  % Unterabbildungen a,b,c,…
@@ -154,6 +155,13 @@ Problematisch ist dabei der endliche Strahldurchmesser $\omega_0$, der zu einer 
 \end{align}
 Solange $\delta x$ kleiner als 1 ist, beschreibt das klassische Dopplermodell das Problem hinreichend. Für größere Werte muss eine Erweiterung des Modells vorgenommen werden.
 
+\begin{figure}[ht] 
+  \centering
+     \includegraphics[width=0.8\textwidth]{DopplerModell}
+  \caption{Phasendifferenzen im erweiterten Dopplermodell	\cite{Skript}}
+  \label{fig:dopplermodell}
+\end{figure}
+
 \subsection{Signalverarbeitung}
 
 Um die Signale aus dem OCT zu verarbeiten, müssen verschiedene Umformungen gemacht werden: Zunächst ein Dechirp, der Verzerrungen ausgleicht, indem er reskaliert. Dann wird über das Spektrum ein Hanning-Fenster gelegt. Dieses schwächt das Rauschen ab, führt aber zu einer Auflösungsverschlechterung. Schließlich wird mit Fast Fourier Transformation das Tiefenprofil erstellt. Die Intensitätsdarstellung wird dabei in die logarithmische Skala überführt und als 8\,bit Grauwert ausgegeben.
@@ -202,7 +210,7 @@ Längenmessungen während der Analyse: In den aufgenommenen Bildern können mit 
 Die Frequenzfunktion wird mit der simulierten TD OCT aufgenommen. Die Einhüllende dieser Funktion (siehe Bild \ref{fig:Funktion})erinnert an zwei gegeneinander gelegte Gausskurven. Sowohl an die Unter- als auch an die Oberseite kann daher ein Gauss-Fit angelegt werden, wie in Bild \ref{fig:hull} zu sehen ist. Aus diesem Fit lässt sich die Schwingungsdauer und die daraus abgeleitete Frequenz bestimmen. Als Fehler dient die über 4 Werte ermittelte Standardabweichung.
 \begin{align*}
 T_{Schwingung} = (0.0253 \pm 0.0007) s \\
-f_{Schwingung} = (19.802 \pm 0.020) 1/s
+f_{Schwingung} = (19.802 \pm 0.020) \frac{1}{s}
 \end{align*}
 
 \begin{figure}[hb] 
@@ -217,25 +225,33 @@ Die Schwingungsamplitude wird mit FD OCT aufgenommen. Das entstandene Bild kann 
 l_{Amplitude} = (49 \pm 4) \mu m
 \end{align*}
 
-Die experimentelle Auflösung wird aus der Geschwindigkeit des Lautsprechers im Nulldurchgang bestimmt:
+Die experimentelle Auflösung wird aus der Geschwindigkeit des Lautsprechers im Nulldurchgang bestimmt. Dafür muss die Halbwertsbreite der Einhüllenden in Hz bestimmt werden. Hierfür wird verwendet, dass die Samplerate 500\,kHz betrug:
 \begin{align}
-l_{c, TD OCT; exp.} = ???
+FWHM_{Scans;Hz} = \frac{FWHM_{Scans;Samples}}{500 kHz}
+\end{align}
+\begin{align*}
+FWHM_{Scans;Hz} = (1.948 \pm 0.008) mHz
+\end{align*}
+\begin{align}
+l_{c, TD OCT; exp.} = v_{max; Lautsprecher} FWHM_{Scans;Hz}
 \end{align}
 
 Die Geschwindigkeit wird mit der Frequenz des Lautsprechers und der Amplitude über folgende Formel berechnet:
 \begin{align}
-v_{max; Lautsprecher} = l_{Amplitude} 2 \pi f_{Schwingung} \\
+v_{max; Lautsprecher} = l_{Amplitude} 2 \pi f_{Schwingung} 
+\end{align}
+\begin{align}
 \Delta v_{max; Lautsprecher} = \sqrt{(2 \pi f_{Schwingung} \Delta l_{Amplitude})^2 + (2 \pi \Delta f_{Schwingung} l_{Amplitude})^2}
 \end{align}
 
 Der Fehler berechnet sich über die Gauss'sche Fehlerfortpflanzung. Es folgt:
 \begin{align*}
-v_{Lautsprecher} = (6.1 \pm 0.5) mm/s
+v_{Lautsprecher} = (6.1 \pm 0.5) \frac{mm}{s}
 \end{align*}
  
 Damit ergibt sich der folgende Wert:
 \begin{align*}
-l_{c, TD OCT; exp.} = ???
+l_{c, TD OCT; exp.} = (11.9 \pm 1.0) \mu m
 \end{align*}
 
 Die theoretische Auflösung der TD OCT wird mit der Formel 2 berechnet. 
@@ -245,8 +261,10 @@ l_{c, TD OCT; th.} = 9.0022 \mu m
 
 Das Verhältnis der beiden Auflösungen ist damit folgendes:
 \begin{align*}
-\frac{l_{c, TD OCT; exp.}}{l_{c, TD OCT; th.}} = ???
+\frac{l_{c, TD OCT; exp.}}{l_{c, TD OCT; th.}} = 1.32 \pm 0.11
 \end{align*}
+
+Die experimentelle erreichte Auflösung ist also etwas schlechter als die theoretisch erreichbare Auflösung. Da ein experimenteller Aufbau aber nie an das Ideal heranreichen wird, ist diese Abweichung durchaus zu erwarten.
 
 \subsection{Frequency Domain OCT}
 
@@ -263,38 +281,38 @@ Das Verhältnis der beiden Auflösungen ist damit folgendes:
 	\label{fig:peak}
 \end{figure}
 
-Zur Bestimmung der experimentellen axialen Auflösung der FD OCT wird das Rückstreuspektrum einer angerauten Glasplatte untersucht. Dieses Spektrum zeigt einen Peak, dessen Halbwertsbreite der Halbwertsbreite FWHM\textsubscript{z} entspricht und damit mit der axialen Auflösung korrespondiert. Das Rückstreuspektrum kann in Bild \ref{fig:Spektrum}, der Peak in Bild \ref{fig:peak} gesehen werden.
+Zur Bestimmung der experimentellen axialen Auflösung der FD OCT wird das Rückstreuspektrum einer Glasplatte untersucht. Dieses Spektrum zeigt einen Peak, dessen Halbwertsbreite der Halbwertsbreite FWHM\textsubscript{z} entspricht und damit mit der axialen Auflösung l korrespondiert. Das Rückstreuspektrum kann in Bild \ref{fig:Spektrum}, der Peak in Bild \ref{fig:peak} gesehen werden. Da unsere Glasplatte allerings nicht angeraut war und sich daher keine Gitterstreuung mit einem scharfen 0. Maximum ergab, ist die gemessene Halbwertsbreite vermutlich größer als die tatsächlich mit dem Versuchsaufbau Mögliche.
 \begin{align*}
-l_{c, FD OCT; exp.} = (27.4 \pm 0.3) \mu m
+l_{FD OCT; exp.} = (27.4 \pm 0.3) \mu m
 \end{align*}
 
-Die theoretische Auflösung der FD OCT lässt sich mithilfe der Formel 3 bestimmen. Dabei stellt die spektrale Bandbreite $\Delta \lambda$ des Lasers FWHM\textsubscript{y} da. Da der Brechungsindex des Glases nicht gegeben ist, muss die theoretische Auflösung für alle wahrscheinlichen Indices berechnet werden. Diese liegen im Bereich von 1.45 bis 2.12. \cite{Brechungsindizes}
+Die theoretische Auflösung der FD OCT lässt sich mithilfe der Formel 3 bestimmen. Dabei stellt die spektrale Bandbreite $\Delta \lambda$ des Lasers FWHM\textsubscript{$\lambda$} da. Da der Brechungsindex des Glases nicht gegeben ist, wird der normale Brechungsindex für Fensterglas 1.5 angenommen. 
 \begin{align*}
-l_{c, FD OCT; th.} = (5.2 \pm 1.0) \mu m
+l_{FD OCT; th.} = 6.00 \mu m
 \end{align*}
 
 Damit ergibt sich für das Verhältnis der beiden Auflösungen folgendes:
 \begin{align*}
-\frac{l_{c, FD OCT; exp.}}{l_{c, FD OCT; th.}} = 5.45 \pm 1.05
+\frac{l_{FD OCT; exp.}}{l_{FD OCT; th.}} = 4.57 \pm 0.05
 \end{align*}
 
-Die experimentelle Auflösung ist also um ein vielfaches schlechter als die theoretisch mögliche. Dafür verantwortlich müssen der Messaufbau und die Genauigkeit der Untersuchungsgeräte sein, da der Fit des Peaks sehr gut passt und somit die Datenauswertung sehr genau ist. 
+Die experimentelle Auflösung ist also um ein Vielfaches schlechter als die theoretisch mögliche. Dies deckt sich sehr gut mit der Vermutung der Peakaufbreitung durch die nicht-angeraute Glasplatte. 
 
-Im folgenden wird die Auswirkung von Wassereinwirkung auf die Haut der Fingerspitzen untersucht. Dabei zeigen die Bilder \ref{fig:uncreme} das Verhalten eines uneingecremten und die Bilder \ref{fig:creme} das Verhalten eines eingecremten Fingers. 
+Im folgenden wird die Auswirkung von Wasser auf die Haut der Fingerspitzen untersucht. Dabei zeigen die Bilder \ref{fig:uncreme} das Verhalten eines uneingecremten und die Bilder \ref{fig:creme} das Verhalten eines eingecremten Fingers. 
 
 \begin{figure}[ht]
 	\centering
 	\begin{subfigure}[b]{0.3\textwidth}
 	   \includegraphics[width=\textwidth]{finger_uncreme_1}
-		 \caption{Ohne Einwirkung von Wasser}
+		 \caption{Trocken}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\textwidth}
 	   \includegraphics[width=\textwidth]{finger_uncreme_2}
-		 \caption{Nach 10 Minuten im Wasserbad}
+		 \caption{10 Minuten Wasserbad}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\textwidth}
 	   \includegraphics[width=\textwidth]{finger_uncreme_3}
-		 \caption{Nach 20 Minuten im Wasserbad}
+		 \caption{20 Minuten Wasserbad}
 	\end{subfigure}
   \caption{Uneingecremte Fingerspitze}
 	\label{fig:uncreme}
@@ -304,27 +322,46 @@ Im folgenden wird die Auswirkung von Wassereinwirkung auf die Haut der Fingerspi
 	\centering
 	\begin{subfigure}[b]{0.3\textwidth}
 	   \includegraphics[width=\textwidth]{finger_creme_1}
-		 \caption{Ohne Einwirkung von Wasser}
+		 \caption{Trocken}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\textwidth}
 	   \includegraphics[width=\textwidth]{finger_creme_2}
-		 \caption{Nach 10 Minuten im Wasserbad}
+		 \caption{10 Minuten Wasserbad}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\textwidth}
 	   \includegraphics[width=\textwidth]{finger_creme_3}
-		 \caption{Nach 20 Minuten im Wasserbad}
+		 \caption{20 Minuten Wasserbad}
 	\end{subfigure}
   \caption{Eingecremte Fingerspitze}
 	\label{fig:creme}
 \end{figure}
 
-Die Bilder zeigen die oberste Hautschicht (Epidermis) und den Beginn der zweiten Schicht (Dermis). Die eingecremten Finger zeigen zuätzlich eine weiß erscheinende Ablagerung auf der Epidermis, welche vermutlich die Creme darstellt. Grundsätzlich lässt sich erkennen, dass die Einwirkung von Wasser zu einer Vergrößerung der Epidermis führt. Die genauen Werte wurden an den dargestellten Bildern mittels Mittelung von Messungen an 4 Stellen ermittelt. Dargestellt werden die Größenänderungen der Epidermis im Bezug zu ihrer Anfangshöhe:
-\begin{align*}
-\Delta d_{ohne Creme, in 10 Minuten} = +0.1525 mm \\
-\Delta d_{ohne Creme, in 20 Minuten} = +0.2225 mm \\
-\Delta d_{mit Creme, in 10 Minuten} = +0.1225 mm \\
-\Delta d_{mit Creme, in 20 Minuten} = +0.1000 mm
-\end{align*}
+Die Bilder zeigen die oberste Hautschicht (Epidermis) und den Beginn der zweiten Schicht (Dermis). Die eingecremten Finger zeigen zuätzlich eine weiß erscheinende Ablagerung auf der Epidermis, welche vermutlich die Creme darstellt. Grundsätzlich lässt sich erkennen, dass die Einwirkung von Wasser zu einer Vergrößerung der Epidermis führt. Die genauen Werte wurden an den dargestellten Bildern mittels Mittelung von Messungen an 4 Stellen ermittelt und können in Tabelle \ref{tab:finger} eingesehen werden. Dabei wurde zur Berechnung der Dicke in $mm$ verwendet, dass ein Pixel $5 \mu m$ entspricht und die Epidermis einen Brechungsindex von 1.45 hat \cite{brechung}:
+\begin{align}
+d_{Epidermis; mm} = \frac{d_{Epidermis; Pixel}5\mu m}{n_{Epidermis}}
+\end{align}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}[h]{p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}}
+& \multicolumn{3}{c|}{ohne creme} & \multicolumn{3}{c}{mit creme} \\ \hline
+Messung & Messwerte [Pixel] & Mittelung [Pixel] & Mittelung [$mm$] & Messwerte [Pixel] & Mittelung [Pixel] & Mittelung [$mm$]\\ \hline
+\multirow{4}{*}{Trocken} & 81 & \multirow{4}{*}{79.75} & \multirow{4}{*}{0.275} & 83 & \multirow{4}{*}{83.75} & \multirow{4}{*}{0.289} \\
+& 75 & & & 81 & & \\
+& 82 & & & 90 & & \\
+& 81 & & & 81 & & \\ \hline
+& 120 & \multirow{4}{*}{110.25} & \multirow{4}{*}{0.380} & 102 & \multirow{4}{*}{108.25} & \multirow{4}{*}{0.373} \\
+10 Minuten & 114 & & & 117 & & \\
+Wasser & 103 & & & 106 & & \\
+& 104 & & & 108 & & \\ \hline
+& 121 & \multirow{4}{*}{124.25} & \multirow{4}{*}{0.428} & 103 & \multirow{4}{*}{103.75} & \multirow{4}{*}{0.358} \\
+20 Minuten & 117 & & & 104 & & \\
+Wasser & 131 & & & 111 & & \\
+& 128 & & & 97 & & \\ \hline
+\end{tabular}
+\caption{Dicke der Epidermis vor und nach Wassereinwirkung}
+\label{tab:finger}
+\end{table}
 
 Es zeigt sich, dass der eingecremte Finger weniger aufquillt als der uneingecremte Finger, die Creme schützt den Finger also vor dem Eindringen von Wasser. Dies wird vermutlich durch den hohen Fettgehalt bedingt - Fett stößt Wasser ab. Die Abschwellung des uneingecremten Fingers nach 20 Minuten hingegen ist vermutlich auf Messfehler zurück zu führen.
 Auf eine Fehlerberechnung wird aufgrund der ungenauen Datenaufnahme verzichtet. Der größte Fehler entsteht dadurch, dass sich die beobachteten Stellen nur sehr schlecht wiederfinden lassen und daher die Bilder nur in etwa die selbe Stelle des Fingers zeigen.
@@ -333,15 +370,16 @@ Auf eine Fehlerberechnung wird aufgrund der ungenauen Datenaufnahme verzichtet. 
 
 \begin{figure}[ht]
 	\centering
-	  \includegraphics[width=\textwidth]{KapillarLuft}
-	\caption{Ungefülltes Flussphantom}
-	\label{fig:leerkap}
-\end{figure}
-\begin{figure}[ht]
-  \centering
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{KapillarLuft}
+	  \caption{Ungefülltes Flussphantom}
+	  \label{fig:leerkap}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
 	  \includegraphics[width=\textwidth]{KapillarEmulsion}
-	\caption{Gefülltes Flussphantom}
-	\label{fig:fuelkap}
+	  \caption{Gefülltes Flussphantom}
+	  \label{fig:fuelkap}
+  \end{subfigure}
 \end{figure}
 
 Als erstes soll überprüft werden, wie groß der Durchmesser des Flussphantoms an der untersuchten Stelle wirklich ist. Dafür wird ein Bild des leeren Phantoms aufgenommen, welches in Bild \ref{fig:leerkap} gesehen werden kann. 
@@ -349,33 +387,37 @@ Als erstes soll überprüft werden, wie groß der Durchmesser des Flussphantoms 
 d_{Flussphantom} = (290.5 \pm 6.5) \mu m
 \end{align*}
 
-Damit ist die untersuchte Stelle etwas schmaler als ursprünglich angenommen.
+Damit ist die untersuchte Stelle etwas schmaler als die ursprünglich angenommenen $300\, \mu m$.
 
-Dann wird der Brechungsindex der Intralipid20-Lösung ermittelt. Dafür wird auch im Bild des Flussphantoms gefüllt mit Emulsion (Bild \ref{fig:fuelkap}) der Kapillardurchmesser in Pixeln gemessen und das Verhältnis der beiden berechnet: 
+Dann wird der Brechungsindex der Intralipid20-Lösung ermittelt. Dafür wird der Kapillardurchmesser auch im Bild des Flussphantoms gefüllt mit Emulsion (Bild \ref{fig:fuelkap}) in Pixeln gemessen und das Verhältnis der beiden gemessenen Durchmesser berechnet: 
 \begin{align}
 n_{Intralipid20} = \frac{d_{Intralipid20}}{d_{Luft}}
 \end{align}
 \begin{align*}
 d_{Luft} = (58.1 \pm 1.3) Pixel \\
 d_{Intralipid20} = (80.6 \pm 1.3) Pixel \\
-n_{Intralipid20} = 1.39 \pm 0.4
+n_{Intralipid20} = 1.39 \pm 0.04
 \end{align*}
 
 Nun wird das Geschwindigkeitsprofil im Phantom betrachtet. Dabei muss eine Geschwindigkeit eingestellt werden, die eine Verschiebung unterhalb der Grenze $\delta x = 1$ hervorruft. Der dafür notwendige Volumenstrom $\dot V$ kann mit folgender Formel berechnet werden: 
 \begin{align}
 \dot V = \frac{\pi R^2 \omega_0 f_{Scans} \delta_x}{2 \cos (\theta)}
 \end{align}
-Wobei R der Radius des Phantoms ist, $f_{Scans}$ die Auslesefrequenz und $\theta$ der Winkel zwischen betrachteter und tatsächlicher Geschwindigkeit der Lösung. Der einzustellende Winkel ergibt sich aus der Abbildung 9 im Skript \cite{Skript}, es soll ein Winkel gefunden werden, bei dem das unkorrigierte Doppler-Modell noch greift und der gleichzeitig möglichst groß ist, damit der verwendete Volumenstrom größtmöglich ist. Der gefundene Maximalwinkel $\theta_0$ beträgt etwa $154.5^\circ$. Durch den Brechungsindex der Lösung verschiebt sich der beobachtete Winkel jedoch. Der tatsächlich einzustellende Winkel berechnet sich über:
+Wobei R der Radius des Phantoms ist, $f_{Scans}$ die Auslesefrequenz und $\theta$ der Winkel zwischen betrachteter und tatsächlicher Geschwindigkeit der Lösung. Der einzustellende Winkel ergibt sich aus dem Modell in Abbildung \ref{fig:dopplermodell}, es soll ein Winkel gefunden werden, bei dem das unkorrigierte Doppler-Modell noch greift und der gleichzeitig möglichst groß ist, damit der verwendete Volumenstrom größtmöglich ist. Der gefundene Maximalwinkel $\theta_0$ beträgt etwa $2.69^\circ$. Durch den Brechungsindex der Lösung verschiebt sich der beobachtete Winkel jedoch. Der tatsächlich einzustellende Winkel berechnet sich über:
 \begin{align}
 \theta = \theta_0 n_{Intralipid20}
 \end{align}
+Und ergibt sich damit zu:
+\begin{align*}
+\theta = 3.61^\circ
+\end{align*}
 
 Daraus folgt, dass folgender Volumenstrom eingestellt werden muss:
 \begin{align*}
-\dot V = 0.4 ml / s
+\dot V = 0.4 \frac{ml}{s}
 \end{align*}
 
-In diesem Experiment nahm das Aufnahmegerät jedoch keine Flussgeschwindigkeiten bei diesem Volumenstrom auf, entweder, weil das Programm nicht richtig arbeitete, oder weil die Pumpe nicht richtig funktionierte. Dabei ist eine Fehlfunktion der Pumpe wahrscheinlicher, da keine Pumpgeräusche mehr bei niedrigen Volumenströmen zu höhren waren. Wir haben mit einem an der Pumpe eingestellten Volumenstrom von $4.4\, ml/s$ gearbeitet.
+In diesem Experiment nahm das Aufnahmegerät jedoch keine Flussgeschwindigkeiten bei diesem Volumenstrom auf, entweder, weil das Programm nicht richtig arbeitete, oder weil die Pumpe nicht richtig funktionierte. Dabei ist eine Fehlfunktion der Pumpe wahrscheinlicher, da keine Pumpgeräusche mehr bei niedrigen Volumenströmen zu hören waren. Wir haben daher mit einem an der Pumpe eingestellten Volumenstrom von $4.4\, ml/s$ gearbeitet, der den niedrigsten Wert darstellte, für den eine Messung möglich war.
 
 \begin{figure}[ht]
 	\centering
@@ -394,14 +436,28 @@ Bild \ref{fig:flussbild} zeigt das Bild der Flussgeschwindigkeit im Aufnahmeger�
 
 \section{Fazit}
 
+\subsection{Time Domain OCT}
+
 \begin{align*}
-l_{c, TD OCT; exp.} = ??? \\
+l_{c, TD OCT; exp.} = (11.9 \pm 1.0) \mu m \\
 l_{c, TD OCT; th.} = 9.0022 \mu m \\
-\frac{l_{c, TD OCT; exp.}}{l_{c, TD OCT; th.}} = ??? \\
-l_{c, FD OCT; exp.} = (27.4 \pm 0.3) \mu m \\
-l_{c, FD OCT; th.} = (5.2 \pm 1.0) \mu m \\
-\frac{l_{c, FD OCT; exp.}}{l_{c, FD OCT; th.}} = 5.27 \pm 1.01
+\frac{l_{c, TD OCT; exp.}}{l_{c, TD OCT; th.}} = 1.32 \pm 0.11
 \end{align*}
+
+Wir konnten feststellen, dass die Auflösung unserer TD OCT, obwohl sie mithilfe eines Spiegels improvisiert wurde, sehr gut an die theoretisch mögliche heranreichte. Die Improvisation als Beispiel für TD OCTzu betrachten ist also durchaus legitim. 
+Die Ungenauigkeiten entstehen unter anderem durch die nicht optimale Gausskurve. Das Gerät ließ keine fließende Einstellung für kleine Werte zu, sondern veränderte die Einstellungen nur bei stärkeren Verstellungen. Auch eine nicht optimale Fokussierung und Erschütterungen des nicht-gefederten Versuchstisches führen zu Ungenauigkeiten.
+
+\subsection{Frequency Domain OCT}
+
+\begin{align*}
+l_{FD OCT; exp.} = (27.4 \pm 0.3) \mu m \\
+l_{FD OCT; th.} = (5.2 \pm 1.0) \mu m \\
+\frac{l_{FD OCT; exp.}}{l_{c, FD OCT; th.}} = 5.27 \pm 1.01
+\end{align*}
+
+
+
+
 
 
 
@@ -418,11 +474,11 @@ l_{c, FD OCT; th.} = (5.2 \pm 1.0) \mu m \\
   https://tu-dresden.de/med/mf/ksm/ressourcen/dateien/OCT\_Anleitung.pdf?lang=de
 	10.11.2016
 	14:00 Uhr
-
-\bibitem{Brechungsindizes}
-  http://de.wikipedia.org/wiki/Brechungsindex
-	10.11.2016
-	12:00 Uhr
+	
+\bibitem{brechung}
+  https://de.wikipedia.org/wiki/Brechungsindex
+	14.11.2016
+	17:50 Uhr
 
 \end{thebibliography}
 

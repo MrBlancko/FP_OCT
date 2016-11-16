@@ -111,33 +111,20 @@ Bei der OCT wird ein Material mit Licht einer bestimmten Wellenlänge im Infraro
 
 \subsection{Time Domain OCT}
 
-Bei der Time Domain OCT (TD OCT) wird breitbandiges, kurzkohärentes Licht verwendet. Damit wird gewährleistet, dass Interferenz nur entsteht, wenn beide Arme annähernd gleich lang sind. Die Kohärenzlänge bestimmt damit direkt die axiale Auflösung. Durch Verschiebung des Referenzspiegels, sodass die Interferenz bestehen bleibt, kann die Tiefe der Reflexion bestimmt werden. Durch die nötige mechanische Arbeit können nur Wiederholungsraten von wenigen kHz erzeugt werden. Aufgezeichnet wird nur die Intensität der Interferenz.\\
-Die normierte komplexe Selbstkohärenzfunktion stellt den Interferenzterm da: 
-\begin{align}
-\gamma ( \tau ) = e^{-i \Omega \tau} e^{\frac{1}{16 \ln 2} ( \Delta \Omega \tau )^2} 
-\end{align}
-\begin{align*}
-\Omega = \text{Kreisfrequenz;} \ \tau = \text{Laufzeitdifferenz}
-\end{align*}
-Kohärenzlänge und axiale Auflösung: 
+Bei der Time Domain OCT (TD OCT) wird breitbandiges, kurzkohärentes Licht verwendet. Damit wird gewährleistet, dass Interferenz nur entsteht, wenn beide Arme annähernd gleich lang sind. Die Kohärenzlänge bestimmt damit direkt die theoretische axiale Auflösung. Die Kohärenzlänge wird dabei über folgende Formel bestimmt:
 \begin{align}
 l_c = \frac{2 \ln 2}{\pi} \frac{\lambda_c^2}{\Delta \lambda} 
 \end{align}
-\begin{align*}
-\lambda_c = \text{Zentralwellenlänge des Laserspektrums}
-\end{align*}
+Dabei ist $\lambda_c$ die Zentralwellenlänge des Laserspektrums.
+Durch Verschiebung des Referenzspiegels, sodass die Interferenz bestehen bleibt, kann die Tiefe der Reflexion bestimmt werden. Durch die nötige mechanische Arbeit können nur Wiederholungsraten von wenigen kHz erzeugt werden. Aufgezeichnet wird nur die Intensität der Interferenz.
 
 \subsection{Frequency Domain OCT}
 
-Bei der Frequency Domain OCT (oder auch Fourier Domain OCT; FD OCT) wird im Unterschied zur TD OCT nicht nur die Intensität des Interferenzsignals, sondern des ganzen Interferenzspektrum aufgezeichnet, indem das Licht spektral zerlegt wird. Damit kann die gesamte Tiefeninformation gleichzeitig aufgenommen werden und das Signal-Rausch-Verhältnis ist wesentlich besser. Es gibt zwei Varianten: Die Spectral Domain OCT (SD OCT), bei der das Licht durch ein Spektrometer gefiltert wird, und die Swept Source OCT (SS OCT), bei der die Wellenlänge des Lichts durchgestimmt wird. Die Wiederholungsrate wird bei SD OCT durch die Auslesegeschwindigkeit der Fotochips bestimmt und liegt bei etwa 200\,kHz. \\
-Axiale Auflösung:
+Bei der Frequency Domain OCT (oder auch Fourier Domain OCT; FD OCT) wird im Unterschied zur TD OCT nicht nur die Intensität des Interferenzsignals, sondern des ganzen Interferenzspektrum aufgezeichnet, indem das Licht spektral zerlegt wird. Damit kann die gesamte Tiefeninformation gleichzeitig aufgenommen werden und das Signal-Rausch-Verhältnis ist wesentlich besser. Es gibt zwei Varianten: Die Spectral Domain OCT (SD OCT), bei der das Licht durch ein Spektrometer gefiltert wird, und die Swept Source OCT (SS OCT), bei der die Wellenlänge des Lichts durchgestimmt wird. Die Wiederholungsrate wird bei SD OCT durch die Auslesegeschwindigkeit der Fotochips bestimmt und liegt bei etwa 200\,kHz. Die theoretische axiale Auflösung bestimmt sich hier nicht durch die Kohärenzlänge des Lichtes, sondern durch die Halbwertsbreite des Reflexionspeaks. 
 \begin{align}
 FWHM_z = \frac{\sqrt{2 \ln 2}}{n}\frac{\lambda_c^2}{2 \pi \sigma_\lambda} = \frac{2 \ln 2}{\pi n}\frac{\lambda_c^2}{FWHM_\lambda} 
 \end{align}
-\begin{align*}
-\sigma_\lambda = \text{Standardabweichung bezüglich der Wellenlänge;} \ n = \text{Brechungsindex der Probe;} \\ FWHM_\lambda = \text{Halbwertsbreite des Laserspektrums}
-\end{align*}
-Maximale Eindringtiefe:
+Dabei ist $\sigma_\lambda$ die Standardabweichung bezüglich der Wellenlänge, n der Brechungsindex der Probe und $FWHM_{\lambda}$ die Halbwertsbreite des Laserspektrums. Die maximale Eindringtiefe lässt sich leicht über folgende Formel bestimmen: 
 \begin{align}
 z_{max} = \frac{\pi}{2 \delta k} = \frac{\lambda_c^2}{4 \delta \lambda}
 \end{align}
@@ -184,9 +171,19 @@ Als nächstes wird eine medizinische Messung durchgeführt. Dafür werden zwei F
 
 \subsection{Doppler FD OCT}
 
-Als letztes soll in einer runden Glaskapillare mit einem Innendurchmesser von etwa $300\, \mu m$ die Fließgeschwindigkeit quantitativ bestimmt werden. Dafür wird eine Lösung aus $2\,ml$ Intralipid20 und $48\,ml$ destilliertem Wasser hergestellt. Dann wird der tatsächliche Innendurchmesser an der untersuchten Stelle gemessen, indem dort ein Bild der leeren Kapillare nach der Fokussierung aufgenommen wird. Dann wird zur Bestimmung des Brechungsindex der Kapillare ein Bild der mit der Lösung durchsetzten Kapillare gemacht. 
+Als letztes soll in einer runden Glaskapillare mit einem Innendurchmesser von etwa $300\, \mu m$ die Fließgeschwindigkeit quantitativ bestimmt werden. Dafür wird eine Lösung aus $2\,ml$ Intralipid20 und $48\,ml$ destilliertem Wasser hergestellt. Dann wird der tatsächliche Innendurchmesser an der untersuchten Stelle gemessen, indem dort ein Bild der leeren Kapillare nach der Fokussierung aufgenommen wird. Anschließend wird zur Bestimmung des Brechungsindex der Kapillare ein Bild der mit der Lösung durchsetzten Kapillare gemacht. 
 
-Zur Bestimmung der Fließgeschwindigkeit muss zunächst der korrekte Dopplerwinkel eingestellt werden. Danach wird ein Volumenstrom eingestellt, der zu einer maximalen Fließgeschwindigkeit unterhalb der Schwelle zum erweiterten Dopllermodell führt. Schließlich werden mit dem Programm OCT\_MAXIMUS\_Doppler.vi die Geschwindigkeitsprofile aufgenommen und gespeichert. 
+Zur Bestimmung der Fließgeschwindigkeit muss zunächst der korrekte Dopplerwinkel eingestellt werden. Danach wird ein Volumenstrom eingestellt, der zu einer maximalen Fließgeschwindigkeit unterhalb der Schwelle zum erweiterten Dopllermodell führt. 
+Dabei muss eine Geschwindigkeit eingestellt werden, die eine Verschiebung unterhalb der Grenze $\delta x = 1$ hervorruft. Der dafür notwendige Volumenstrom $\dot V$ kann mit folgender Formel berechnet werden: 
+\begin{align}
+\dot V = \frac{\pi R^2 \omega_0 f_{Scans} \delta_x}{2 \cos (\theta)}
+\end{align}
+Wobei R der Radius des Phantoms ist, $f_{Scans}$ die Auslesefrequenz und $\theta$ der Winkel zwischen betrachteter und tatsächlicher Geschwindigkeit der Lösung. Der einzustellende Winkel ergibt sich aus dem Modell in Abbildung \ref{fig:dopplermodell}, es soll ein Winkel gefunden werden, bei dem das unkorrigierte Doppler-Modell noch greift und der gleichzeitig möglichst groß ist, damit der verwendete Volumenstrom größtmöglich ist. Der gefundene Maximalwinkel $\theta_0$ beträgt etwa $2.69^\circ$. Durch den Brechungsindex der Lösung verschiebt sich der beobachtete Winkel jedoch. Der tatsächlich einzustellende Winkel berechnet sich über:
+\begin{align}
+\theta = \theta_0 n_{Intralipid20}
+\end{align}
+
+Der korrekte Volumenstrom wird berechnet. Schließlich werden mit dem Programm OCT\_MAXIMUS\_Doppler.vi die Geschwindigkeitsprofile aufgenommen und gespeichert. 
 
 \section{Analyse}
 
@@ -213,7 +210,7 @@ T_{Schwingung} = (0.0253 \pm 0.0007) s \\
 f_{Schwingung} = (19.802 \pm 0.020) \frac{1}{s}
 \end{align*}
 
-\begin{figure}[hb] 
+\begin{figure}[ht] 
   \centering
     \includegraphics[width=0.7\textwidth]{Amplitude_Beispiel}
   \caption{Auswertung der aufgenommenen Schwingungsamplitude des Lautsprechers}
@@ -276,14 +273,14 @@ Die experimentelle erreichte Auflösung ist also etwas schlechter als die theore
 \end{figure}
 \begin{figure}[ht]
   \centering
-	  \includegraphics[width=\textwidth]{Ergebnis}
+	  \includegraphics[width=\textwidth]{Glasplatte_final}
 	\caption{Details des Rückstreupeaks}
 	\label{fig:peak}
 \end{figure}
 
 Zur Bestimmung der experimentellen axialen Auflösung der FD OCT wird das Rückstreuspektrum einer Glasplatte untersucht. Dieses Spektrum zeigt einen Peak, dessen Halbwertsbreite der Halbwertsbreite FWHM\textsubscript{z} entspricht und damit mit der axialen Auflösung l korrespondiert. Das Rückstreuspektrum kann in Bild \ref{fig:Spektrum}, der Peak in Bild \ref{fig:peak} gesehen werden. Da unsere Glasplatte allerings nicht angeraut war und sich daher keine Gitterstreuung mit einem scharfen 0. Maximum ergab, ist die gemessene Halbwertsbreite vermutlich größer als die tatsächlich mit dem Versuchsaufbau Mögliche.
 \begin{align*}
-l_{FD OCT; exp.} = (27.4 \pm 0.3) \mu m
+l_{FD OCT; exp.} = (12.3 \pm 0.7) \mu m
 \end{align*}
 
 Die theoretische Auflösung der FD OCT lässt sich mithilfe der Formel 3 bestimmen. Dabei stellt die spektrale Bandbreite $\Delta \lambda$ des Lasers FWHM\textsubscript{$\lambda$} da. Da der Brechungsindex des Glases nicht gegeben ist, wird der normale Brechungsindex für Fensterglas 1.5 angenommen. 
@@ -293,10 +290,10 @@ l_{FD OCT; th.} = 6.00 \mu m
 
 Damit ergibt sich für das Verhältnis der beiden Auflösungen folgendes:
 \begin{align*}
-\frac{l_{FD OCT; exp.}}{l_{FD OCT; th.}} = 4.57 \pm 0.05
+\frac{l_{FD OCT; exp.}}{l_{FD OCT; th.}} = 2.05 \pm 0.12
 \end{align*}
 
-Die experimentelle Auflösung ist also um ein Vielfaches schlechter als die theoretisch mögliche. Dies deckt sich sehr gut mit der Vermutung der Peakaufbreitung durch die nicht-angeraute Glasplatte. 
+Die experimentelle Auflösung ist also nur halb so gut wie die theoretisch mögliche. Dies deckt sich sehr gut mit der Vermutung der Peakaufbreitung durch die nicht-angeraute Glasplatte. 
 
 Im folgenden wird die Auswirkung von Wasser auf die Haut der Fingerspitzen untersucht. Dabei zeigen die Bilder \ref{fig:uncreme} das Verhalten eines uneingecremten und die Bilder \ref{fig:creme} das Verhalten eines eingecremten Fingers. 
 
@@ -399,15 +396,7 @@ d_{Intralipid20} = (80.6 \pm 1.3) Pixel \\
 n_{Intralipid20} = 1.39 \pm 0.04
 \end{align*}
 
-Nun wird das Geschwindigkeitsprofil im Phantom betrachtet. Dabei muss eine Geschwindigkeit eingestellt werden, die eine Verschiebung unterhalb der Grenze $\delta x = 1$ hervorruft. Der dafür notwendige Volumenstrom $\dot V$ kann mit folgender Formel berechnet werden: 
-\begin{align}
-\dot V = \frac{\pi R^2 \omega_0 f_{Scans} \delta_x}{2 \cos (\theta)}
-\end{align}
-Wobei R der Radius des Phantoms ist, $f_{Scans}$ die Auslesefrequenz und $\theta$ der Winkel zwischen betrachteter und tatsächlicher Geschwindigkeit der Lösung. Der einzustellende Winkel ergibt sich aus dem Modell in Abbildung \ref{fig:dopplermodell}, es soll ein Winkel gefunden werden, bei dem das unkorrigierte Doppler-Modell noch greift und der gleichzeitig möglichst groß ist, damit der verwendete Volumenstrom größtmöglich ist. Der gefundene Maximalwinkel $\theta_0$ beträgt etwa $2.69^\circ$. Durch den Brechungsindex der Lösung verschiebt sich der beobachtete Winkel jedoch. Der tatsächlich einzustellende Winkel berechnet sich über:
-\begin{align}
-\theta = \theta_0 n_{Intralipid20}
-\end{align}
-Und ergibt sich damit zu:
+Nun wird das Geschwindigkeitsprofil im Phantom betrachtet. Mit dem berechneten Brechungsindex der Intralipid-Lösung ergibt sich:
 \begin{align*}
 \theta = 3.61^\circ
 \end{align*}
@@ -434,6 +423,8 @@ In diesem Experiment nahm das Aufnahmegerät jedoch keine Flussgeschwindigkeiten
 
 Bild \ref{fig:flussbild} zeigt das Bild der Flussgeschwindigkeit im Aufnahmegerät. Die Färbung ist eine Phasenverschiebung, was eine bestehende Flussgeschwindigkeit bedeutet. Das ausgewertete Profil dieser kann in Bild \ref{fig:flussdia} gesehen werden.
 
+
+
 \section{Fazit}
 
 \subsection{Time Domain OCT}
@@ -450,16 +441,14 @@ Die Ungenauigkeiten entstehen unter anderem durch die nicht optimale Gausskurve.
 \subsection{Frequency Domain OCT}
 
 \begin{align*}
-l_{FD OCT; exp.} = (27.4 \pm 0.3) \mu m \\
+l_{FD OCT; exp.} = (12.3 \pm 0.7) \mu m \\
 l_{FD OCT; th.} = 6.00 \mu m \\
-\frac{l_{FD OCT; exp.}}{l_{c, FD OCT; th.}} = 4.57 \pm 0.05
+\frac{l_{FD OCT; exp.}}{l_{c, FD OCT; th.}} = 2.05 \pm 0.12
 \end{align*}
 
+Bei diesem Versuchsteil zeigte sich, dass unsere Auflösung deutlich schlechter als theoretisch möglich war. Allerdings kann das auch an einem Fehler der Messung der Auflösung liegen: Wie schon erläutert, hätte eine raue Glasplatte vermutlich zu einer besseren gemessenen Auflösung geführt. Bei einem Vergleich der theoretisch erreichbaren Werte erkennt man aber, dass die FD OCT zu besseren Ergebnissen als die TD OCT kommen kann, bei gleichzeitig höherer Geschwindigkeit, wie in den Grundlagen beschrieben.
 
-
-
-
-
+\subsection{Doppler FD OCT}
 
 %------------------------
 

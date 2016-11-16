@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.14)  16 NOV 2016 12:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.14)  16 NOV 2016 12:53
 entering extended mode
 **./Tomographie.tex
 (Tomographie.tex
@@ -2365,72 +2365,73 @@ File: Amplitude_Beispiel.png Graphic file (type png)
 Package pdftex.def Info: Amplitude_Beispiel.png used on input line 218.
 (pdftex.def)             Requested size: 292.7776pt x 160.52362pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 234.
+(babel)             in language  on input line 231.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 234.
+(babel)             in language  on input line 231.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 234.
+(babel)             in language  on input line 231.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 234.
+(babel)             in language  on input line 231.
  [8 <./TD_OCT_FINAL.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 269.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 269.
 
-<Glasplattenreflex.png, id=170, 774.7344pt x 592.8549pt>
+<Glasplattenreflex.png, id=169, 774.7344pt x 592.8549pt>
 File: Glasplattenreflex.png Graphic file (type png)
  <use Glasplattenreflex.png>
 Package pdftex.def Info: Glasplattenreflex.png used on input line 273.
 (pdftex.def)             Requested size: 418.25555pt x 320.06451pt.
 
-<Ergebnis.png, id=171, 774.7344pt x 592.8549pt>
+<Ergebnis.png, id=170, 774.7344pt x 592.8549pt>
 File: Ergebnis.png Graphic file (type png)
  <use Ergebnis.png>
 Package pdftex.def Info: Ergebnis.png used on input line 279.
 (pdftex.def)             Requested size: 418.25555pt x 320.06451pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 287.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 287.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 287.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 287.
+ [9]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 289.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 290.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 290.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 290.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 290.
- [9]
-<finger_uncreme_1.png, id=187, 642.4pt x 513.92pt>
+
+<finger_uncreme_1.png, id=184, 642.4pt x 513.92pt>
 File: finger_uncreme_1.png Graphic file (type png)
  <use finger_uncreme_1.png>
 Package pdftex.def Info: finger_uncreme_1.png used on input line 306.
 (pdftex.def)             Requested size: 125.47794pt x 100.37474pt.
 
-<finger_uncreme_2.png, id=188, 642.4pt x 513.92pt>
+<finger_uncreme_2.png, id=185, 642.4pt x 513.92pt>
 File: finger_uncreme_2.png Graphic file (type png)
  <use finger_uncreme_2.png>
 Package pdftex.def Info: finger_uncreme_2.png used on input line 310.
 (pdftex.def)             Requested size: 125.47794pt x 100.37474pt.
 
-<finger_uncreme_3.png, id=189, 642.4pt x 513.92pt>
+<finger_uncreme_3.png, id=186, 642.4pt x 513.92pt>
 File: finger_uncreme_3.png Graphic file (type png)
  <use finger_uncreme_3.png>
 Package pdftex.def Info: finger_uncreme_3.png used on input line 314.
 (pdftex.def)             Requested size: 125.47794pt x 100.37474pt.
 
-<finger_creme_1.png, id=190, 642.4pt x 513.92pt>
+<finger_creme_1.png, id=187, 642.4pt x 513.92pt>
 File: finger_creme_1.png Graphic file (type png)
  <use finger_creme_1.png>
 Package pdftex.def Info: finger_creme_1.png used on input line 324.
 (pdftex.def)             Requested size: 125.47794pt x 100.37474pt.
 
-<finger_creme_2.png, id=191, 642.4pt x 513.92pt>
+<finger_creme_2.png, id=188, 642.4pt x 513.92pt>
 File: finger_creme_2.png Graphic file (type png)
  <use finger_creme_2.png>
 Package pdftex.def Info: finger_creme_2.png used on input line 328.
 (pdftex.def)             Requested size: 125.47794pt x 100.37474pt.
 
-<finger_creme_3.png, id=192, 642.4pt x 513.92pt>
+<finger_creme_3.png, id=189, 642.4pt x 513.92pt>
 File: finger_creme_3.png Graphic file (type png)
  <use finger_creme_3.png>
 Package pdftex.def Info: finger_creme_3.png used on input line 332.
@@ -2471,13 +2472,13 @@ Overfull \hbox (66.48293pt too wide) in paragraph at lines 346--362
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 369.
+(babel)             in language  on input line 368.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 369.
+(babel)             in language  on input line 368.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 369.
+(babel)             in language  on input line 368.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 369.
+(babel)             in language  on input line 368.
 [10]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 369.
@@ -2495,21 +2496,21 @@ File: KapillarEmulsion.png Graphic file (type png)
 Package pdftex.def Info: KapillarEmulsion.png used on input line 379.
 (pdftex.def)             Requested size: 167.29967pt x 104.5603pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 400.
+(babel)             in language  on input line 395.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 400.
+(babel)             in language  on input line 395.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 400.
+(babel)             in language  on input line 395.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 400.
+(babel)             in language  on input line 395.
  [11]
-<DopplerFluss.png, id=215, 321.2pt x 351.3125pt>
+<DopplerFluss.png, id=214, 321.2pt x 351.3125pt>
 File: DopplerFluss.png Graphic file (type png)
  <use DopplerFluss.png>
 Package pdftex.def Info: DopplerFluss.png used on input line 424.
 (pdftex.def)             Requested size: 418.25555pt x 457.48347pt.
 
-<FlussDiagramm.png, id=216, 774.7344pt x 592.8549pt>
+<FlussDiagramm.png, id=215, 774.7344pt x 592.8549pt>
 File: FlussDiagramm.png Graphic file (type png)
  <use FlussDiagramm.png>
 Package pdftex.def Info: FlussDiagramm.png used on input line 430.
@@ -2616,7 +2617,7 @@ Package rerunfilecheck Info: File `Tomographie.out' has not changed.
 Here is how much of TeX's memory you used:
  23476 strings out of 493334
  433158 string characters out of 3147000
- 623428 words of memory out of 3000000
+ 624404 words of memory out of 3000000
  26550 multiletter control sequences out of 15000+200000
  93330 words of font info for 113 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2628,7 +2629,7 @@ ts/type1/public/lm/lmmi8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr10.pfb><P:/MiKT
 iKTeX/fonts/type1/public/lm/lmr6.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmro10.p
 fb><P:/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><P:/MiKTeX/fonts/type1/publ
 ic/lm/lmsy8.pfb>
-Output written on Tomographie.pdf (18 pages, 3947476 bytes).
+Output written on Tomographie.pdf (18 pages, 3947322 bytes).
 PDF statistics:
  319 PDF objects out of 1000 (max. 8388607)
  68 named destinations out of 1000 (max. 500000)

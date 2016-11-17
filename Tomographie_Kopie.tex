@@ -113,7 +113,7 @@ Bei der OCT wird ein Material mit Licht einer bestimmten Wellenlänge im Infraro
 
 Bei der Time Domain OCT (TD OCT) wird breitbandiges, kurzkohärentes Licht verwendet. Damit wird gewährleistet, dass Interferenz nur entsteht, wenn beide Arme annähernd gleich lang sind. Die Kohärenzlänge bestimmt damit direkt die theoretische axiale Auflösung. Die Kohärenzlänge wird dabei über folgende Formel bestimmt:
 \begin{align}
-l_c = \frac{2 \ln 2}{\pi} \frac{\lambda_c^2}{\Delta \lambda} \label{for:form1}
+l_c = \frac{2 \ln 2}{\pi} \frac{\lambda_c^2}{\Delta \lambda} 
 \end{align}
 Dabei ist $\lambda_c$ die Zentralwellenlänge des Laserspektrums.
 Durch Verschiebung des Referenzspiegels, sodass die Interferenz bestehen bleibt, kann die Tiefe der Reflexion bestimmt werden. Durch die nötige mechanische Arbeit können nur Wiederholungsraten von wenigen kHz erzeugt werden. Aufgezeichnet wird nur die Intensität der Interferenz.
@@ -122,23 +122,23 @@ Durch Verschiebung des Referenzspiegels, sodass die Interferenz bestehen bleibt,
 
 Bei der Frequency Domain OCT (oder auch Fourier Domain OCT; FD OCT) wird im Unterschied zur TD OCT nicht nur die Intensität des Interferenzsignals, sondern des ganzen Interferenzspektrum aufgezeichnet, indem das Licht spektral zerlegt wird. Damit kann die gesamte Tiefeninformation gleichzeitig aufgenommen werden und das Signal-Rausch-Verhältnis ist wesentlich besser. Es gibt zwei Varianten: Die Spectral Domain OCT (SD OCT), bei der das Licht durch ein Spektrometer gefiltert wird, und die Swept Source OCT (SS OCT), bei der die Wellenlänge des Lichts durchgestimmt wird. Die Wiederholungsrate wird bei SD OCT durch die Auslesegeschwindigkeit der Fotochips bestimmt und liegt bei etwa 200\,kHz. Die theoretische axiale Auflösung bestimmt sich hier nicht durch die Kohärenzlänge des Lichtes, sondern durch die Halbwertsbreite des Reflexionspeaks. 
 \begin{align}
-FWHM_z = \frac{\sqrt{2 \ln 2}}{n}\frac{\lambda_c^2}{2 \pi \sigma_\lambda} = \frac{2 \ln 2}{\pi n}\frac{\lambda_c^2}{FWHM_\lambda} \label{for:form2}
+FWHM_z = \frac{\sqrt{2 \ln 2}}{n}\frac{\lambda_c^2}{2 \pi \sigma_\lambda} = \frac{2 \ln 2}{\pi n}\frac{\lambda_c^2}{FWHM_\lambda} 
 \end{align}
 Dabei ist $\sigma_\lambda$ die Standardabweichung bezüglich der Wellenlänge, n der Brechungsindex der Probe und $FWHM_{\lambda}$ die Halbwertsbreite des Laserspektrums. Die maximale Eindringtiefe lässt sich leicht über folgende Formel bestimmen: 
 \begin{align}
-z_{max} = \frac{\pi}{2 \delta k} = \frac{\lambda_c^2}{4 \delta \lambda} \label{for:form3}
+z_{max} = \frac{\pi}{2 \delta k} = \frac{\lambda_c^2}{4 \delta \lambda}
 \end{align}
 
 \subsection{Doppler FD OCT}
 
 Mit Hilfe der Doppler FD OCT können schließlich auch Geschwindigkeiten quantitativ untersucht werden. Dafür muss nun neben der Intensität auch die Phase $\phi$ mit aufgenommen werden. Eine aufgenommene Phasenverschiebung deutet eine axiale Verschiebung an, also eine Geschwindigkeit des untersuchten Materials.
 \begin{align}
-\Delta \phi = 2 k \Delta z_s \label{for:form4}
+\Delta \phi = 2 k \Delta z_s
 \end{align}
 
 Problematisch ist dabei der endliche Strahldurchmesser $\omega_0$, der zu einer Wichtung der aufgenommenen Amplituden und Phasen führt. Um mit dieser Wichtung umzugehen, werden dimensionslose Größen eingeführt:
 \begin{align}
-\delta x = \frac{\Delta x}{\omega _0} \label{for:form4}
+\delta x = \frac{\Delta x}{\omega _0}
 \end{align}
 Solange $\delta x$ kleiner als 1 ist, beschreibt das klassische Dopplermodell das Problem hinreichend. Für größere Werte muss eine Erweiterung des Modells vorgenommen werden.
 
@@ -176,11 +176,11 @@ Als letztes soll in einer runden Glaskapillare mit einem Innendurchmesser von et
 Zur Bestimmung der Fließgeschwindigkeit muss zunächst der korrekte Dopplerwinkel eingestellt werden. Danach wird ein Volumenstrom eingestellt, der zu einer maximalen Fließgeschwindigkeit unterhalb der Schwelle zum erweiterten Dopllermodell führt. 
 Dabei muss eine Geschwindigkeit eingestellt werden, die eine Verschiebung unterhalb der Grenze $\delta x = 1$ hervorruft. Der dafür notwendige Volumenstrom $\dot V$ kann mit folgender Formel berechnet werden: 
 \begin{align}
-\dot V = \frac{\pi R^2 \omega_0 f_{Scans} \delta_x}{2 \cos (\theta)} \label{for:form5}
+\dot V = \frac{\pi R^2 \omega_0 f_{Scans} \delta_x}{2 \cos (\theta)}
 \end{align}
 Wobei R der Radius des Phantoms ist, $f_{Scans}$ die Auslesefrequenz und $\theta$ der Winkel zwischen betrachteter und tatsächlicher Geschwindigkeit der Lösung. Der einzustellende Winkel ergibt sich aus dem Modell in Abbildung \ref{fig:dopplermodell}, es soll ein Winkel gefunden werden, bei dem das unkorrigierte Doppler-Modell noch greift und der gleichzeitig möglichst groß ist, damit der verwendete Volumenstrom größtmöglich ist. Der gefundene Maximalwinkel $\theta_0$ beträgt etwa $2.69^\circ$. Durch den Brechungsindex der Lösung verschiebt sich der beobachtete Winkel jedoch. Der tatsächlich einzustellende Winkel berechnet sich über:
 \begin{align}
-\theta = \theta_0 n_{Intralipid20} \label{for:form6}
+\theta = \theta_0 n_{Intralipid20}
 \end{align}
 
 Der korrekte Volumenstrom wird berechnet. Schließlich werden mit dem Programm OCT\_MAXIMUS\_Doppler.vi die Geschwindigkeitsprofile aufgenommen und gespeichert. 
@@ -204,32 +204,10 @@ Längenmessungen während der Analyse: In den aufgenommenen Bildern können mit 
 	\label{fig:hull}
 \end{figure}
 
-Das Ziel hier ist die Bestimmung der axialen Auflösung der TD OCT sowohl im betrachteten als auch im theoretischen Fall. Die beiden Werte sollen dann verglichen werden. Dafür werden folgende Formeln verwendet:
-\begin{align}
-f_{Schwingung} = \frac{1}{T_{Schwingung}} \label{for:tf}
-\end{align}
-\begin{align}
-v_{max; Lautsprecher} = l_{Amplitude} 2 \pi f_{Schwingung} \label{for:v_max}
-\end{align}
-\begin{align}
-\Delta v_{max; Lautsprecher} = \sqrt{(2 \pi f_{Schwingung} \Delta l_{Amplitude})^2 + (2 \pi \Delta f_{Schwingung} l_{Amplitude})^2} \label{for:delta_v}
-\end{align}
-\begin{align}
-FWHM_{Scans;s} = \frac{FWHM_{Scans;Samples}}{500 kHz} \label{for:FWHM_TD}
-\end{align}
-\begin{align}
-l_{c, TD OCT; exp.} = v_{max; Lautsprecher} FWHM_{Scans;s} \label{for:l_td_exp}
-\end{align}
-\begin{align}
-l_{c, TD OCT; th.} = \frac{2 \ln 2}{\pi} \frac{\lambda_c^2}{\Delta \lambda} \label{for:l_td_th}
-\end{align}
-
-Dafür müssen die Schwingungsdauer $T_{Schwingung}$, die Schwingungsamplitude $l_{Amplitude}$ sowie die Halbwertsbreite der Einhüllenden der Frequenzfunktion bestimmt werden.
-
-Die Frequenzfunktion wird mit der simulierten TD OCT aufgenommen. Die Einhüllende dieser Funktion (siehe Bild \ref{fig:Funktion}) erinnert an zwei gegeneinander gelegte Gausskurven. Sowohl an die Unter- als auch an die Oberseite kann daher ein Gauss-Fit angelegt werden, wie in Bild \ref{fig:hull} zu sehen ist. Aus diesem Fit lässt sich die Schwingungsdauer und die daraus abgeleitete Frequenz über die Formel \ref{for:tf} bestimmen. Als Fehler dient die über 4 Werte ermittelte Standardabweichung.
+Die Frequenzfunktion wird mit der simulierten TD OCT aufgenommen. Die Einhüllende dieser Funktion (siehe Bild \ref{fig:Funktion})erinnert an zwei gegeneinander gelegte Gausskurven. Sowohl an die Unter- als auch an die Oberseite kann daher ein Gauss-Fit angelegt werden, wie in Bild \ref{fig:hull} zu sehen ist. Aus diesem Fit lässt sich die Schwingungsdauer und die daraus abgeleitete Frequenz bestimmen. Als Fehler dient die über 4 Werte ermittelte Standardabweichung.
 \begin{align*}
 T_{Schwingung} = (0.0253 \pm 0.0007) s \\
-f_{Schwingung} = (19.802 \pm 0.020) Hz
+f_{Schwingung} = (19.802 \pm 0.020) \frac{1}{s}
 \end{align*}
 
 \begin{figure}[ht] 
@@ -239,28 +217,41 @@ f_{Schwingung} = (19.802 \pm 0.020) Hz
   \label{fig:amplitude}
 \end{figure}
 
-Die Schwingungsamplitude kann mit der simulierten TD OCT nicht gemessen werden, daher wurde hierfür mit der FD OCT ein Bild aufgenommen. Dieses kann in Bild \ref{fig:amplitude} gesehen werden. Durch Mittelung über vier Werte kann aus dem Bild die Amplitude bestimmt werden. Auch hier ist der Fehler die Standardabweichung über die 4 Werte.
+Die Schwingungsamplitude wird mit FD OCT aufgenommen. Das entstandene Bild kann in Bild \ref{fig:amplitude} gesehen werden. Auch hier wird als Fehler die Standardabweichung über 4 Werte gewählt.
 \begin{align*}
 l_{Amplitude} = (49 \pm 4) \mu m
 \end{align*}
 
-Mithilfe der Werte für die Frequenz kann nun die Geschwindigkeit des Lautsprechers im Nulldurchgang über die Formel \ref{for:v_max} berechnet werden, die wir zur Bestimmung der experimentellen Auflösung benötigen. Der Fehler wird über die Gauss'sche  Fehlerfortpflanzung (\ref{for:delta_v}) bestimmt.
+Die experimentelle Auflösung wird aus der Geschwindigkeit des Lautsprechers im Nulldurchgang bestimmt. Dafür muss die Halbwertsbreite der Einhüllenden in Hz bestimmt und mit der Geschwindigkeit multipliziert werden. Hierfür wird verwendet, dass die Samplerate 500\,kHz betrug:
+\begin{align}
+FWHM_{Scans;s} = \frac{FWHM_{Scans;Samples}}{500 kHz}
+\end{align}
+\begin{align*}
+FWHM_{Scans;s} = (1.948 \pm 0.008) ms
+\end{align*}
+\begin{align}
+l_{c, TD OCT; exp.} = v_{max; Lautsprecher} FWHM_{Scans;s}
+\end{align}
+
+Die Geschwindigkeit wird mit der Frequenz des Lautsprechers und der Amplitude über folgende Formel berechnet:
+\begin{align}
+v_{max; Lautsprecher} = l_{Amplitude} 2 \pi f_{Schwingung} 
+\end{align}
+\begin{align}
+\Delta v_{max; Lautsprecher} = \sqrt{(2 \pi f_{Schwingung} \Delta l_{Amplitude})^2 + (2 \pi \Delta f_{Schwingung} l_{Amplitude})^2}
+\end{align}
+
+Der Fehler berechnet sich über die Gauss'sche Fehlerfortpflanzung. Es folgt:
 \begin{align*}
 v_{Lautsprecher} = (6.1 \pm 0.5) \frac{mm}{s}
 \end{align*}
-
-Als letztes wird nun noch die Halbwertsbreite der Frequenzfunktion benötigt. Diese kann aus dem Diagramm in Bild \ref{fig:hull} abgelesen werden. Mit dem Wissen, dass die Samplerate $500\,kHz$ beträgt, kann dann über die Formel \ref{for:FWHM_TD} die Halbwertsbreite in Sekunden bestimmt werden.
-\begin{align*}
-FWHM_{Scans;Samples} = 974 \pm 4
-FWHM_{Scans;s} = (1.947 \pm 0.007) ms
-\end{align*}
  
-Mit den berechneten Werten ergibt sich nun mit der Formel \ref{for:l_td_exp} folgendes Ergebnis:
+Damit ergibt sich der folgende Wert:
 \begin{align*}
 l_{c, TD OCT; exp.} = (11.9 \pm 1.0) \mu m
 \end{align*}
 
-Die theoretische Auflösung der TD OCT wird mit den gegebenen Werten für die Zentralwellenlänge $\lambda_c = 845 nm$ und die Wellenlängenbreite $\Delta \lambda = 35nm$ über die Formel \ref{for:l_td_th} berechnet: 
+Die theoretische Auflösung der TD OCT wird mit der Formel 2 berechnet. 
 \begin{align*}
 l_{c, TD OCT; th.} = 9.0022 \mu m
 \end{align*}
@@ -286,8 +277,6 @@ Die experimentelle erreichte Auflösung ist also etwas schlechter als die theore
 	\caption{Details des Rückstreupeaks}
 	\label{fig:peak}
 \end{figure}
-
-Auch hier soll die experimentelle und theoretische axiale Auflösung bestimmt werden. Zusätzlich soll die Auswirkung von Wasser auf die Epidermis der Haut untersucht werden. 
 
 Zur Bestimmung der experimentellen axialen Auflösung der FD OCT wird das Rückstreuspektrum einer Glasplatte untersucht. Dieses Spektrum zeigt einen Peak, dessen Halbwertsbreite der Halbwertsbreite FWHM\textsubscript{z} entspricht und damit mit der axialen Auflösung l korrespondiert. Das Rückstreuspektrum kann in Bild \ref{fig:Spektrum}, der Peak in Bild \ref{fig:peak} gesehen werden. Da unsere Glasplatte allerings nicht angeraut war und sich daher keine Gitterstreuung mit einem scharfen 0. Maximum ergab, ist die gemessene Halbwertsbreite vermutlich größer als die tatsächlich mit dem Versuchsaufbau Mögliche.
 \begin{align*}
@@ -389,11 +378,6 @@ Auf eine Fehlerberechnung wird aufgrund der ungenauen Datenaufnahme verzichtet. 
 	  \label{fig:fuelkap}
   \end{subfigure}
 \end{figure}
-
-Mithilfe der Doppler FD OCT soll die Flussgeschwindigkeit in einem Phantom untersucht werden. Dafür werden folgende Formeln verwendet:
-\begin{align}
-n_{Intralipid20} = \frac{d_{Intralipid20}}{d_{Luft}}
-\end{align}
 
 Als erstes soll überprüft werden, wie groß der Durchmesser des Flussphantoms an der untersuchten Stelle wirklich ist. Dafür wird ein Bild des leeren Phantoms aufgenommen, welches in Bild \ref{fig:leerkap} gesehen werden kann. 
 \begin{align*}
